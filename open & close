@@ -1,0 +1,21 @@
+package sql.c;
+
+public class solidprinciples {
+    interface Payment {
+        void pay();
+    }
+    static class CreditCardPayment implements Payment {
+        public void pay() { System.out.println(" i paid with credit card"); }
+    }
+    static class UPIPayment implements Payment {
+        public void pay() { System.out.println(" i paid with upi"); }
+    }
+    public static void main(String[] args) {
+        Payment payment = new CreditCardPayment();
+        payment.pay();
+        payment = new UPIPayment();
+        payment.pay();
+    }
+}
+// this is second principle open / close 
+// my customs upi and creditcard payment
