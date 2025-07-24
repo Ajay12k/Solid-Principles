@@ -1,0 +1,21 @@
+package sql.c;
+
+public class sqlpackage {
+    static class Book {
+        String title;
+        Book(String title) { this.title = title; }
+    }
+    static class BookPrinter {
+        void print(Book book) {
+            System.out.println("Book Title: " + book.title);
+        }
+    }
+    public static void main(String[] args) {
+        Book book = new Book("solid principles");
+        BookPrinter printer = new BookPrinter();
+        printer.print(book);
+    }
+}
+
+// single responsibility principle
+// i taken book and book printer has my customs
