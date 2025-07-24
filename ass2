@@ -1,0 +1,23 @@
+package assign.two;
+
+import java.util.*;
+
+public class ass2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        LinkedList<String> tasks = new LinkedList<>();
+
+        System.out.println("Enter 4 tasks:");
+        for (int i = 0; i < 4; i++) {
+            String task = sc.nextLine();
+            if (task.endsWith("l")) {
+                tasks.addFirst(task); 
+            } else {
+                tasks.addLast(task);
+            }
+        }
+
+        Collections.reverse(tasks);
+        System.out.println("Tasks in reverse order: " + tasks);
+    }
+}
