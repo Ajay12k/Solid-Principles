@@ -1,0 +1,17 @@
+package sql.c;
+
+public class solidprinciples {
+    static class Bird {
+        void move() { System.out.println("Bird is moving"); }
+    }
+    static class Sparrow extends Bird {
+        void move() { System.out.println("Sparrow is flying"); }
+    }
+    public static void main(String[] args) {
+        Bird bird = new Sparrow(); 
+        bird.move();
+    }
+}
+
+//this is third principle liskov principle
+// i taken customs has bird, sparrow
